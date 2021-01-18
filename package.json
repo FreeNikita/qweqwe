@@ -1,18 +1,29 @@
 {
   "name": "test_project",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
-  "author": "",
   "license": "ISC",
-  "testEnvironment": "node",
-  "type": "module",
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "jest",
-    "test:analytic": "jest --coverage",
-    "lint": "eslint src/**/**.js"
+  "dependencies": {
+    "axios": "^0.21.1"
   },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "airbnb": "^0.0.2",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "jest": "^26.6.3"
+  },
+  "type": "module",
+  "testEnvironment": "node",
   "jest": {
     "collectCoverage": true,
     "coverageReporters": [
@@ -24,24 +35,14 @@
       "config"
     ]
   },
-  "dependencies": {
-    "airbnb": "^0.0.2",
-    "axios": "^0.21.1",
-    "babel-eslint": "^10.1.0",
-    "eslint-import-resolver-webpack": "^0.13.0",
-    "jest": "^26.6.3"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/node": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "babel-jest": "^26.6.3",
-    "eslint": "^7.18.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^24.1.0",
-    "eslint-plugin-prettier": "^3.1.2"
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "test:analytic": "jest --coverage",
+    "lint": "eslint src/**/**.js"
+  },"husky": {
+  "hooks": {
+    "pre-commit": "npm run test"
   }
+}
 }
