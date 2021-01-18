@@ -48,8 +48,7 @@
     "src/**/*.{js,jsx}": [
       "eslint --ext .js,.jsx",
       "prettier --write",
-      "npm test",
-      "git add"
+      "npm test"
     ]
   },
   "husky": {
