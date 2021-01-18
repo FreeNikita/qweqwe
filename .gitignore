@@ -1,5 +1,7 @@
 .idea
-package-lock.json
-yarn.lock
+
 coverage
 node_modules
+
+package-lock.json
+yarn.lock
