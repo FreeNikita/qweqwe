@@ -40,9 +40,10 @@
     "test": "jest",
     "test:analytic": "jest --coverage",
     "lint": "eslint src/**/**.js"
-  },"husky": {
-  "hooks": {
-    "pre-commit": "npm run test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   }
-}
 }
