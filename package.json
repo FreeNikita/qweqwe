@@ -46,7 +46,7 @@
   "lint-staged": {
     "src/**/*.{js,json,md}": [
       "npm run lint",
-      "npm test"
+      "jest --findRelatedTests"
     ]
   },
   "husky": {
